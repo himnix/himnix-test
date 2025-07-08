@@ -2,7 +2,7 @@
   "name": "himnix-test",
   "version": "1.0.0",
   "description": "Simple Node.js app for deployment",
-  "main": "index.js",
+"main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
