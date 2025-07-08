@@ -1,45 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>himnix GPT</title>
-  <style>
-    body { font-family: sans-serif; padding: 20px; background: #f4f4f4; }
-    textarea, button { width: 100%; font-size: 16px; margin-top: 10px; }
-    #response { white-space: pre-wrap; background: #fff; padding: 10px; margin-top: 20px; border-radius: 5px; }
-  </style>
-</head>
-<body>
-
-  <h2>🚀 اسأل Himnix GPT</h2>
-
-  <textarea id="prompt" rows="4" placeholder="اكتب سؤالك هنا..."></textarea>
-  <button onclick="ask()">إرسال</button>
-
-  <div id="response"></div>
-
-  <script>
-    async function ask() {
-      const prompt = document.getElementById("prompt").value;
-      const resBox = document.getElementById("response");
-      resBox.innerText = "⏳ جاري المعالجة...";
-
-      try {
-        const res = await fetch("/ask", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ prompt })
-        });
-
-        const data = await res.json();
-        const content = data.choices?.[0]?.message?.content || "❌ مافي رد";
-        resBox.innerText = content;
-
-      } catch (err) {
-        resBox.innerText = "❌ صار خطأ: " + err.message;
-      }
-    }
-  </script>
-
-</body>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Himnix</title>
+  </head>
+  <body>
+    <h1>أهلاً بك في Himnix</h1>
+    <p>هذه هي الواجهة الأمامية</p>
+  </body>
 </html>
